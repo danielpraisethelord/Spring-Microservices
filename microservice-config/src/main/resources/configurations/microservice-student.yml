@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: microservice-student
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3307/microservice_student
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: MYSQL
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    show-sql: true
+
+server:
+  port: 8090
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
